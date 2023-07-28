@@ -28,14 +28,11 @@
         <v-card v-if='project.dialog'>
           <v-img :src='project.poster'></v-img>
           <v-card-text>
-            <h3 class='headline mb-0'>
-              <span>Technology</span>
-            </h3>
-            <v-chip color='green' text-color='white'>{{project.tech.tech1}}</v-chip>
-            <v-chip color='green' text-color='white'>{{project.tech.tech2}}</v-chip>
-            <v-chip color='green' text-color='white'>{{project.tech.tech3}}</v-chip>
-            <v-chip color='green' text-color='white'>{{project.tech.tech4}}</v-chip>
-          </v-card-text>
+              <h3 class='headline mb-0'>
+                <span>Technology</span>
+              </h3>
+              <v-chip v-for="(tech, key) in project.tech" :key="key" color='green' text-color='white'>{{tech}}</v-chip>
+            </v-card-text>
           <v-card-actions>
             <v-btn flat large dark color='green' :href='project.git' target='_blank'>
               <v-icon left>fab fa-github</v-icon>GitHub
@@ -80,7 +77,8 @@ export default {
             tech1: 'VUE',
             tech2: 'Storyblok',
             tech3: 'HTML',
-            tech4: 'JavaScript'
+            tech4: 'JavaScript',
+            tech5: 'Vuetify'
           },
           poster: require('@/assets/MySite.png')
         },
@@ -88,10 +86,9 @@ export default {
           dialog: false,
           title: 'EvalUAT',
           tech: {
-            tech1: 'kotlin',
-            tech2: 'KVision',
-            tech3: 'Ktor',
-            tech4: 'Postgres'
+            tech1: 'KVision',
+            tech2: 'kotlin',
+            tech3: 'Postgres'
           },
           poster: require('@/assets/evaluat_results.png')
         },
@@ -99,10 +96,9 @@ export default {
           dialog: false,
           title: 'iSCMIS',
           tech: {
-            tech1: 'kotlin',
-            tech2: 'KVision',
-            tech3: 'Ktor',
-            tech4: 'Postgres'
+            tech1: 'KVision',
+            tech2: 'kotlin',
+            tech3: 'Postgres'
           },
           poster: require('@/assets/iSCMIS.png')
         }
