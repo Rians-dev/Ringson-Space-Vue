@@ -48,7 +48,7 @@ export default new Router({
       path: '/projects/Data Analytics',
       name: 'dataAnalyticsProjects',
       component: () =>
-        import( /* webpackChunkName: 'about' */ './views/Projects/ComingSoon.vue')
+        import( /* webpackChunkName: 'about' */ './views/Projects/DataAnalytics.vue')
     },
     {
       path: '/projects/web Applications',
