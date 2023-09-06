@@ -32,10 +32,7 @@
               <h3 class='headline mb-0'>
                 <span>Technology</span>
               </h3>
-              <v-chip color='green' text-color='white'>{{project.tech.tech1}}</v-chip>
-              <v-chip color='green' text-color='white'>{{project.tech.tech2}}</v-chip>
-              <v-chip color='green' text-color='white'>{{project.tech.tech3}}</v-chip>
-              <v-chip color='green' text-color='white'>{{project.tech.tech4}}</v-chip>
+              <v-chip v-for="(tech, key) in project.tech" :key="key" color='green' text-color='white'>{{tech}}</v-chip>
             </v-card-text>
             <v-card-actions>
               <v-btn flat large dark color='green' :href='project.git' target='_blank'>
@@ -80,9 +77,8 @@
             des: "A Learning tool that allows teachers regardless of place, time and qualification to access knowledge and learning in order to enhance their capacity.",
             tech: {
               tech1: 'Jetpack Compose',
-              tech2: 'Laravel',
-              tech3: 'Kotlin',
-              tech4: 'Postgres'
+              tech2: 'Angular',
+              tech3: 'Kotlin'
             },
             poster: require('@/assets/ELK.png')
           },
@@ -93,8 +89,7 @@
             tech: {
               tech1: 'Jetpack Compose',
               tech2: 'Kotlin',
-              tech3: 'KobToolBox',
-              tech4: 'Kotor',
+              tech3: 'KobToolBox'
             },
             poster: require('@/assets/siyafunda.jpg')
           },
@@ -105,8 +100,7 @@
             tech: {
               tech1: 'Flutter',
               tech2: 'Dart',
-              tech3: 'Firebase',
-              tech4: 'Cloud Functions'
+              tech3: 'Firebase'
             },
             poster: require('@/assets/Digitres.png')
           },

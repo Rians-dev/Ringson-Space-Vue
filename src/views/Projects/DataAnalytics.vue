@@ -30,22 +30,11 @@
         <v-card v-if="project.dialog">
           <v-img :src="project.poster"></v-img>
           <v-card-text>
-            <h3 class="headline mb-0">
-              <span>Technology</span>
-            </h3>
-            <v-chip color="green" text-color="white">{{
-              project.tech.tech1
-            }}</v-chip>
-            <v-chip color="green" text-color="white">{{
-              project.tech.tech2
-            }}</v-chip>
-            <v-chip color="green" text-color="white">{{
-              project.tech.tech3
-            }}</v-chip>
-            <v-chip color="green" text-color="white">{{
-              project.tech.tech4
-            }}</v-chip>
-          </v-card-text>
+              <h3 class='headline mb-0'>
+                <span>Technology</span>
+              </h3>
+              <v-chip v-for="(tech, key) in project.tech" :key="key" color='green' text-color='white'>{{tech}}</v-chip>
+            </v-card-text>
           <v-card-actions>
             <v-btn
               flat
@@ -97,14 +86,13 @@ export default {
     return {
       dialog: false,
       projects: [
-        {
+      {
           dialog: false,
-          title: 'This Site',
+          title: 'iSCMIS',
           tech: {
-            tech1: 'VUE',
-            tech2: 'Storyblok',
-            tech3: 'HTML',
-            tech4: 'JavaScript'
+            tech1: 'KVision',
+            tech2: 'kotlin',
+            tech3: 'Postgres'
           },
           poster: require('@/assets/iSCMIS.png')
         }

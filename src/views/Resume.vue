@@ -148,8 +148,8 @@
     </v-flex>
     <v-flex xs12 sm12 md4 lg5 xl5 class="mt-4 pt-4">
       <h2 class="pl-4 pt-2">
-        <span>Framework</span>
-        <span class="green--text">Skills</span>
+        <span>Web</span>
+        <span class="green--text">Frameworks</span>
       </h2>
       <br />
       <div class="mx-5">
@@ -192,9 +192,9 @@
     </v-flex>
     <v-flex xs12 sm12 md4 lg5 xl5 class="mt-4 pt-4">
       <h2 class="pl-4 pt-2">
-        <span>Mobile Apps</span>
+        <span>Mobile</span>
 
-        <span class="green--text">Skills</span>
+        <span class="green--text">Frameworks</span>
       </h2>
       <br />
       <div class="mx-5">
