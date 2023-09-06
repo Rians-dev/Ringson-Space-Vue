@@ -8,7 +8,7 @@
         <v-dialog
           v-model='project.dialog'
           lazy
-          max-width='1000'
+          max-width='500'
           v-for='project in projects'
           :key='project.title'
         >

@@ -106,7 +106,7 @@ export default {
             tech3: 'HTML',
             tech4: 'JavaScript'
           },
-          poster: require('@/assets/MySite.png')
+          poster: require('@/assets/iSCMIS.png')
         }
       ]
     };

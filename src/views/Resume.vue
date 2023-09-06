@@ -137,6 +137,13 @@
           color="green"
           height="20"
         ></v-progress-linear>
+        <strong>C#</strong>
+        <v-progress-linear
+          v-model="csharpBuffer"
+          :buffer-value="bufferValue"
+          color="green"
+          height="20"
+        ></v-progress-linear>
       </div>
     </v-flex>
     <v-flex xs12 sm12 md4 lg5 xl5 class="mt-4 pt-4">
@@ -170,6 +177,13 @@
         <strong>Laravel</strong>
         <v-progress-linear
           v-model="laravelBuffer"
+          :buffer-value="bufferValue"
+          color="green"
+          height="20"
+        ></v-progress-linear>
+        <strong>.NET</strong>
+        <v-progress-linear
+          v-model="dotNetBuffer"
           :buffer-value="bufferValue"
           color="green"
           height="20"
@@ -262,6 +276,8 @@ export default {
     return {
       value: 0,
       vueBuffer: 0,
+      dotNetBuffer: 0,
+      csharpBuffer: 0,
       powerBIBuffer: 0,
       reactBuffer: 0,
       excelBuffer: 0,
@@ -305,6 +321,8 @@ export default {
         this.kotlinjavaBuffer = 75;
         this.phpBuffer = 70;
         this.firebaseBuffer = 65;
+        this.dotNetBuffer = 80;
+        this.csharpBuffer = 80
       }, 800);
     }
   }
